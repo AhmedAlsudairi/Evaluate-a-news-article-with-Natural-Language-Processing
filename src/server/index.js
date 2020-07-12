@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dotenv.config({path:'../../to/envVariables.env'});
+dotenv.config();
 // process.env.key is undefiend !!
 var path = require('path')
 const express = require('express')
