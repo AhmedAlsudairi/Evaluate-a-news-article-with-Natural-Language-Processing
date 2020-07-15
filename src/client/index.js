@@ -9,7 +9,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 
-
+window.alert('hi there');
 
 export{
 
@@ -18,3 +18,4 @@ export{
     validateURL,
     fetchData
 }
+
