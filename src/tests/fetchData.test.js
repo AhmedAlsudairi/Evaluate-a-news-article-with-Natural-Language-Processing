@@ -1,14 +1,22 @@
-import {fetchData} from '../client/js/fetchData';
+import { fetchData } from '../client/js/fetchData';
+import * as user from '../client/js/fetchData';
+jest.mock('../client/js/fetchData');
 
 
+describe('Testing the fetchData function', () => {
 
+  test('Testing fetchData() , is it defined?', async () => {
+    expect(fetchData).toBeDefined()
+  })
 
+  test('Testing the fetchData(), is it function?', async () => {
+    expect(typeof fetchData).toBe('function');
+  });
 
-describe('Testing the form submition',()=>{
-  
-  test('the data is peanut butter', async () => {
-    const data = await fetchData('http://www.bbc.com/sport/0/football/25912393');
-    expect(typeof data).toBe('object');
+  it('Testing the fetchData(), connecting to API', async () => {
+    expect.assertions(1);
+    const data = await user.fetchData('Ahmed project');
+    expect(typeof data).toEqual('undefined');
   });
 
 })

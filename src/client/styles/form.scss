@@ -2,15 +2,37 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
-
+    background-color: wheat;;
     #message{
         text-align: center;
         color: red;
         font-weight: bold;
+    
+        
     }
 
     #submitBtn{
         cursor: pointer;
+        background-color: lightblue;
+        color: black ;
+        border: solid 1px blue;
+        border-radius: 2px;
+    }
+
+    #submitBtn:hover{
+        cursor: pointer;
+        background-color: rgb(64, 173, 209);
+        color: black ;
+        border: solid 1px blue;
+        border-radius: 2px;
+    }
+
+    #submitBtn:disabled{
+        cursor: pointer;
+        background-color: rgb(220, 246, 255);
+        color: gray ;
+        border: solid 1px lightblue;
+        border-radius: 2px;
     }
 }
 

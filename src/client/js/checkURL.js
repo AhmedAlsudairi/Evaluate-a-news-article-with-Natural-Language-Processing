@@ -1,18 +1,17 @@
-import{validateURL} from './validateURL';
+import { validateURL } from './validateURL';
 function checkURL(event) {
 
-    // check what text was put into the form field
-    let url = event.target.value
-    let valid = validateURL(url);
+    const url = event.target.value
+    const valid = validateURL(url);
 
-    let errMessage = document.getElementById('message');
-    let submitBtn = document.getElementById('submitBtn');
-    if(valid){
-        errMessage.innerHTML='';
+    const errMessage = document.getElementById('message');
+    const submitBtn = document.getElementById('submitBtn');
+    if (valid) {
+        errMessage.innerHTML = '';
         submitBtn.removeAttribute('disabled');
-    }else{
-        errMessage.innerHTML='The URL is invalid'
-        submitBtn.setAttribute('disabled','true');
+    } else {
+        errMessage.innerHTML = 'The URL is invalid'
+        submitBtn.setAttribute('disabled', 'true');
     }
 
 }

@@ -2,10 +2,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(255, 240, 211);
 }
 
 main {
     flex: 2;
+
+    #results{
+        padding: 5px;
+        margin: 20px;
+    }
 }
 
 section {

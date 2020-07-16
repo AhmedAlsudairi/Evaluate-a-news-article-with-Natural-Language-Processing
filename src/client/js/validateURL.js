@@ -1,8 +1,8 @@
 function validateURL(url) {
 
-    let valid = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
+    const valid = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
 
-return valid;
+    return valid;
 }
 
 export { validateURL }

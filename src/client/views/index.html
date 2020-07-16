@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-       
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
+<body>
+    <header>
+        <div class="">
+            Logo
+        </div>
+        <div class="">
+            <h1>Hashtag Generator</h1>
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+    <main>
+        <section>
+            <form class="">
+                <p id='message'></p>
+                <br>
+                <p>Please enter the URL you want to generate Hashtag for:</p>
+                <input id="name" type="text" name="input" value="" placeholder="Name"
+                    onblur="return Client.checkURL(event)">
+                <input id="submitBtn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    disabled>
+            </form>
             <section>
-                <form class="">
-                    <p id='message'></p>
-                    <br>
-                    <p>Please enter the URL you want to generate Hashtag for:</p>
-                    <input id="name" type="text" name="input" value="" placeholder="Name" onblur="return Client.checkURL(event)">
-                    <input id="submitBtn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" disabled>
-                </form>
-            <section>
+                <section>
+                    <strong>Hashags:</strong>
+                    <div id="results"></div>
+                </section>
+    </main>
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
 
-            <section>
-                <strong>Hashags:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
 </html>

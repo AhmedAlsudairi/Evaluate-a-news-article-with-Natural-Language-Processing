@@ -1,15 +1,33 @@
-import {validateURL} from '../client/js/validateURL';
+import { validateURL } from '../client/js/validateURL';
 
 
 
-describe('Testing the form submition',()=>{
-    
-    test('Testing the URLvalidition, is the URL valid?',()=>{
+describe('Testing the validateURL function', () => {
 
-       let url = 'http://www.bbc.com/sport/0/football/25912393';
+    test('Testing the validateURL(), is it defined?', () => {
+        expect(validateURL).toBeDefined();
+    });
 
-        let valid = validateURL(url);
+    test('Testing the validateURL(), is it function?', () => {
+        expect(typeof validateURL).toBe('function');
+    });
+
+    test('Testing the URL validition, is the URL valid?', () => {
+
+        const url = 'http://www.bbc.com/sport/0/football/25912393';
+
+        const valid = validateURL(url);
 
         expect(valid).toBe(true);
     });
+
+    test('Testing the URL validition, is the URL not valid?', () => {
+
+        const url = 'Ahmed project';
+
+        const valid = validateURL(url);
+
+        expect(valid).toBe(false);
+    });
+
 })

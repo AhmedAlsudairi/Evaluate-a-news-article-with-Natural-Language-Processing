@@ -1,18 +1,12 @@
-import {fetchData} from './fetchData';
-async function  handleSubmit (event){
+import { fetchData } from './fetchData';
+
+async function handleSubmit(event) {
+
     event.preventDefault()
-
-    // check what text was put into the form field
-    let url = document.getElementById('name').value
-
+    const url = document.getElementById('name').value
     console.log("::: Form Submitted :::")
-
-    let data = await fetchData(url);
-  
-    console.log(data);
+    const data = await fetchData(url);
     document.getElementById('results').innerHTML = data;
-    
-    
 }
 
 export { handleSubmit }
