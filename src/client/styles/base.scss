@@ -7,14 +7,24 @@ body {
 
 main {
     flex: 2;
-
-    #results{
-        padding: 5px;
-        margin: 20px;
-    }
 }
 
 section {
     max-width: 800px;
     margin: 50px auto;
+    
+    h2{
+        font-size: x-large;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+
+    span{
+        font-weight: bolder;
+        font-size: large;
+    }
+
+    div{
+        margin: 20px;
+    }
 }

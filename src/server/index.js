@@ -33,12 +33,23 @@ app.listen(8081, function () {
 
 app.get('/test', function (req, res) {
 
-  textapi.hashtags({
-    url: req.query.text
-  }, function (error, response) {
+  // textapi.hashtags({
+  //   url: req.query.text
+  // }, function (error, response) {
+  //   if (error === null) {
+  //     res.send(response.hashtags);
+  //   } else {
+  //     console.log(error);
+  //   }
+  // });
+
+  textapi.sentiment({
+    url: req.query.text,
+    mode: 'tweet'
+  }, function(error, response) {
     if (error === null) {
-      res.send(response.hashtags);
-    } else {
+      res.send(response);
+    }else{
       console.log(error);
     }
   });
