@@ -1,7 +1,8 @@
 # Evaluate-a-news-article-with-Natural-Language-Processing
+## Project overview:
 This project is about using webapack, node.js, express.js to build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. The (NLP) is provided by external API - Aylie https://aylien.com/
 
-# Getting started
+## Getting started
 1. use <code>cd</code> to go to the appropriate path.
 2. run <code>npm insatll</code> to install all dependencies.
 ### Start the app
@@ -11,12 +12,12 @@ This project is about using webapack, node.js, express.js to build a web tool th
 ### Testing the app
 1. run <code>npm run test</code> to start the jest testnig.
 
-# External APIs
+## External APIs
 <ul>
   <li><a target="_blank" href="https://aylien.com/">Aylie</a></li>
 </ul>
 
-# Used tools and technologies
+## Used tools and technologies
 <ul>
   <li>Webpack</li>
   <li>Bable</li>
